@@ -1,8 +1,8 @@
 # Cajero Automatico con JavaScript
 ### Hola 👋, Cajero Automatico
 [Link del Proyecto](https://arlingholguin.github.io/cajero/)  
-####Acceder al arreglo de objetos cuentas
-[img](https://i.ibb.co/CVnTkFR/cajero-automatico.jpg)
+#### Acceder al arreglo de objetos cuentas
+![img](https://i.ibb.co/CVnTkFR/cajero-automatico.jpg)
 Al seleccionar una cuenta, debes ingresar el password asociado a la cuenta.
 Si el password es incorrecto, debes notificar al usuario y permitirle intentarlo nuevamente. Si el password es correcto, debes mostrar las siguientes opciones:
 - 🔭 Consultar saldo
