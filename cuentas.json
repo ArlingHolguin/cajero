@@ -1,0 +1,31 @@
+[{
+        "nombre": "Mali",
+        "saldo": 200,
+        "email": "mali.mali@email.com",
+        "password": "12345678"
+    },
+    {
+        "nombre": "Gera",
+        "saldo": 290,
+        "email": "gera.gera@email.com",
+        "password": "12345678"
+    },
+    {
+        "nombre": "Maui",
+        "saldo": 67,
+        "email": "maui.maui@email.com",
+        "password": "12345678"
+    },
+    {
+        "nombre": "Arling",
+        "saldo": 500,
+        "email": "arlin.holguin@email.com",
+        "password": "12345678"
+    },
+    {
+        "nombre": "David",
+        "saldo": 550,
+        "email": "david.zonana@email.com",
+        "password": "12345678"
+    }
+]
