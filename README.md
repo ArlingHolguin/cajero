@@ -1,8 +1,9 @@
 # Cajero Automatico con JavaScript
-### Hola 👋, Cajero Automatico
+### Hola 👋, Cajero Automatico <img src='https://github.githubassets.com/images/mona-loading-default.gif' alt='github' height='30'>
 [Link del Proyecto](https://arlingholguin.github.io/cajero/)  
 #### Acceder al arreglo de objetos cuentas
-![img](https://i.ibb.co/CVnTkFR/cajero-automatico.jpg)
+
+<img src='https://i.ibb.co/CVnTkFR/cajero-automatico.jpg' alt='cajero automatico arling' >
 Al seleccionar una cuenta, debes ingresar el password asociado a la cuenta.
 Si el password es incorrecto, debes notificar al usuario y permitirle intentarlo nuevamente. Si el password es correcto, debes mostrar las siguientes opciones:
 - 🔭 Consultar saldo
