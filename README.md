@@ -1,4 +1,4 @@
-# cajero
+# Cajero Automatico con JavaScript
 //acceder a el arreglo de objetos cuentas
 //Al seleccionar una cuenta, debes ingresar el password asociado a la cuenta.
 // Si el password es incorrecto, debes notificar al usuario y permitirle intentarlo
