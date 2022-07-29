@@ -52,7 +52,7 @@ function impares(numero) {
 }
 console.log(impares(100));
 
-//generar un arreglo del abecedario en mayusculas 
+//generar un arreglo del abecedario en mayusculas
 function abecedario(numero) {
     var abecedario = "";
     for (var i = 65; i <= numero; i++) {
@@ -98,7 +98,8 @@ function reloj() {
     var dia = fecha.getDate();
     var mes = fecha.getMonth() + 1;
     var anio = fecha.getFullYear();
-    var reloj = hora + ":" + minutos + ":" + segundos + " " + dia + "/" + mes + "/" + anio;
+    var reloj =
+        hora + ":" + minutos + ":" + segundos + " " + dia + "/" + mes + "/" + anio;
     return reloj;
 }
 console.log(reloj());
@@ -124,7 +125,6 @@ function calificacion(nota) {
 }
 console.log(calificacion(10));
 
-
 //contar palabras de una frase
 function contarPalabras(frase) {
     var palabras = frase.split(" ");
@@ -137,7 +137,8 @@ function mayuscula(frase) {
     var palabras = frase.split(" ");
     var fraseMayuscula = "";
     for (var i = 0; i < palabras.length; i++) {
-        fraseMayuscula += palabras[i].charAt(0).toUpperCase() + palabras[i].slice(1) + " ";
+        fraseMayuscula +=
+            palabras[i].charAt(0).toUpperCase() + palabras[i].slice(1) + " ";
     }
     return fraseMayuscula;
 }
@@ -155,7 +156,7 @@ console.log(divisible(35));
 
 //Determinar si un año dado es bisiesto.
 function bisiesto(anio) {
-    if (anio % 4 == 0 && anio % 100 != 0 || anio % 400 == 0) {
+    if ((anio % 4 == 0 && anio % 100 != 0) || anio % 400 == 0) {
         return "bisiesto";
     } else {
         return "no bisiesto";
@@ -167,7 +168,7 @@ console.log(bisiesto(2022));
 function emojis(numero) {
     var emojis = [];
     for (var i = 1; i <= numero; i++) {
-        emojis.push(String.fromCodePoint(0x1F600 + i));
+        emojis.push(String.fromCodePoint(0x1f600 + i));
     }
     return emojis;
 }
@@ -183,7 +184,9 @@ function tresLetras(array) {
     }
     return tresLetras;
 }
-console.log(tresLetras(["hola", "mundo", "como", "vamos", "que", "tal", "todo", "bien"]));
+console.log(
+    tresLetras(["hola", "mundo", "como", "vamos", "que", "tal", "todo", "bien"])
+);
 
 //Crea una función que reciba (Nombre Apellido) y retorne el string invertido (Apellido Nombre)
 function invertir(nombre) {
@@ -196,7 +199,7 @@ function invertir(nombre) {
 }
 console.log(invertir("Juan Perez"));
 
-//Crea una función que reciba un array de enteros y retorne un array con los negativos de dichos enteros.   
+//Crea una función que reciba un array de enteros y retorne un array con los negativos de dichos enteros.
 function negativos(array) {
     var negativos = [];
     for (var i = 0; i < array.length; i++) {
@@ -232,7 +235,7 @@ console.log(mayor(62));
 
 //calcular el area de un triangulo
 function areaTriangulo(base, altura) {
-    return base * altura / 2;
+    return (base * altura) / 2;
 }
 console.log(areaTriangulo(5, 6));
 
@@ -244,7 +247,16 @@ function buscar(array, elemento) {
         }
     }
 }
-console.log(buscar([{ nombre: "Juan", edad: 20 }, { nombre: "Pedro", edad: 30 }, { nombre: "Maria", edad: 40 }], "Maria"));
+console.log(
+    buscar(
+        [
+            { nombre: "Juan", edad: 20 },
+            { nombre: "Pedro", edad: 30 },
+            { nombre: "Maria", edad: 40 },
+        ],
+        "Maria"
+    )
+);
 
 //Este bucle escribe el valor de la i con el condicional que indica -mientras i no sea superior a 3
 for (var i = 0; i < 3; i++) {
@@ -276,23 +288,41 @@ function generarLink(array) {
     });
     return arrayNuevo;
 }
-console.log(generarLink([{ imagen: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" }, { imagen: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" }, { imagen: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" }]));
-
+console.log(
+    generarLink([{
+            imagen: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+        },
+        {
+            imagen: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+        },
+        {
+            imagen: "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+        },
+    ])
+);
 
 //calculadora de derivadas
 function derivada(funcion, x) {
     var h = 0.00001;
     return (funcion(x + h) - funcion(x)) / h;
 }
-console.log(derivada(function(x) {
-    return x * x;
-}, 0));
+console.log(
+    derivada(function(x) {
+        return x * x;
+    }, 0)
+);
 
 //calcular si una palabra tiene una tilde y si la tiene que indique si es grave aguda o esdrujula
 function tieneTilde(palabra) {
     var tilde = false;
     for (var i = 0; i < palabra.length; i++) {
-        if (palabra[i] == "á" || palabra[i] == "é" || palabra[i] == "í" || palabra[i] == "ó" || palabra[i] == "ú") {
+        if (
+            palabra[i] == "á" ||
+            palabra[i] == "é" ||
+            palabra[i] == "í" ||
+            palabra[i] == "ó" ||
+            palabra[i] == "ú"
+        ) {
             tilde = true;
         }
     }
@@ -310,3 +340,52 @@ function esPalindromo(string) {
     }
 }
 console.log(esPalindromo("ala"));
+
+//fetch tweeter
+const token = process.env["TWITTER_BEARER_TOKEN"];
+const fetchTweetsFromUser = async(screenName, count) => {
+    const response = await fetch(
+        `https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=${screenName}&count=${count}`, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        }
+    );
+    const json = await response.json();
+    return json;
+};
+
+//funcion calback para sumar dos numeros y sacar el promedio de los dos
+function sumar(numero1, numero2, callback) {
+    var resultado = numero1 + numero2;
+    callback(resultado);
+}
+sumar(1, 2, function(resultado) {
+    console.log(resultado);
+});
+
+//funcion flecha para sumar dos numeros y sacar el promedio de los dos
+sumar = (numero1, numero2) => {
+    var resultado = numero1 + numero2;
+    console.log(resultado);
+}
+sumar(1, 2);
+
+//funcion de orden superior para sumar dos numeros y sacar el promedio de los dos
+let restaCallBack = (a, b) => a - b
+let sumaCallBack = (a, b) => a + b
+
+const operaciones = (numero1, numero2, operacion) => {
+    return operacion(numero1, numero2)
+}
+operaciones(10, 5, sumaCallBack)
+operaciones(10, 5, restaCallBack)
+
+//map
+const numeros = [1, 2, 3, 4, 5]
+    // numeros.map((numero) => numero + 2)
+numeros.map((numero) => {
+    return numero + 2
+})
+
+//filter
