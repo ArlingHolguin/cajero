@@ -86,17 +86,47 @@ function traerCuentas() {
                         res.innerHTML += `<p class="my-2 font-bold text-upercase bg-green-500 p-1 rounded text-center">${cuenta.nombre} ingrese el monto a consignar:</p>
                         <input type="text" class="form-control" id="monto">
                         <button class="btn btn-primary btn-sm" id="consignarMonto">Consignar</button>`;
+
+                        function consignarMonto() {
+                            let monto = document.querySelector("#monto").value;
+                            cuenta.saldo += parseInt(monto);
+                            res.innerHTML += `<p class="my-2 font-bold text-upercase bg-green-500 p-1 rounded text-center">${cuenta.nombre} tu saldo es: ${cuenta.saldo}</p>`;
+                        }
+                        document.querySelector("#consignarMonto").addEventListener("click", consignarMonto);
+
                     });
 
                     document.querySelector("#retirar").addEventListener("click", function() {
                         res.innerHTML += `<p class="my-2 font-bold text-upercase bg-green-500 p-1 rounded text-center">${cuenta.nombre} ingrese el monto a retirar:</p>
                         <input type="text" class="form-control" id="monto">
                         <button class="btn btn-primary btn-sm" id="retirarMonto">Retirar</button>`;
+
+                        function retirarMonto() {
+                            let monto = document.querySelector("#monto").value;
+                            if (monto == "") {
+                                alert("El campo monto esta vacio");
+                            } else {
+                                if (monto > cuenta.saldo) {
+                                    alert("No tiene suficiente saldo");
+                                } else {
+                                    cuenta.saldo = cuenta.saldo - monto;
+                                    res.innerHTML += `<p class="my-2 font-bold text-upercase bg-green-500 p-1 rounded text-center">${cuenta.nombre} tu saldo es: ${cuenta.saldo}</p>`;
+                                }
+                            }
+                        }
+                        document.querySelector("#retirarMonto").addEventListener("click", retirarMonto);
+
                     });
 
                     document.querySelector("#salir").addEventListener("click", function() {
                         res.innerHTML += `<p class="my-2 font-bold text-upercase bg-green-500 p-1 rounded text-center">${cuenta.nombre} saliendo del cajero.</p>`;
                         document.querySelector("#res").innerHTML = "";
+
+                        function salir() {
+                            location.reload();
+
+                        }
+                        setTimeout(salir, 3000);
                     });
 
 
